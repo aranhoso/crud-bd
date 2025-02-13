@@ -7,8 +7,5 @@ app = FastAPI(
 )
 
 @app.get("/", status_code=status.HTTP_200_OK)
-async def root():
-    """
-    Endpoint raiz que sempre retorna 200 OK
-    """
-    return {"status": "success", "message": "API is running"}
+def root():
+    return {"status": "success", "message": "API is running with MySQL connection"}
