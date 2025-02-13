@@ -10,3 +10,8 @@ restartPolicyMaxRetries = 5
 
 [deploy.env]
 PORT = "8000"
+MYSQLUSER = "root"
+MYSQLPASSWORD = "zJICfmvmjBHIVMkHOSMvqUPIylZKamsL"
+MYSQLHOST = "junction.proxy.rlwy.net"
+MYSQLPORT = "14197"
+MYSQL_DATABASE = "railway"
