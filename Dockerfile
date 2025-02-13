@@ -20,4 +20,4 @@ COPY ./app /code/app
 
 ENV PORT=8000
 
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
