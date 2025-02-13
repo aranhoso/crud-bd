@@ -5,7 +5,7 @@ import os
 
 MYSQL_USER = os.getenv("MYSQLUSER", "root")
 MYSQL_PASSWORD = os.getenv("MYSQLPASSWORD", "zJICfmvmjBHIVMkHOSMvqUPIylZKamsL")
-MYSQL_HOST = os.getenv("MYSQLHOST")
+MYSQL_HOST = os.getenv("MYSQLHOST", "junction.proxy.rlwy.net")
 MYSQL_PORT = os.getenv("MYSQLPORT", "14197")
 MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "railway")
 

@@ -26,17 +26,6 @@ async def health_check():
     """Endpoint específico para healthcheck"""
     return {"status": "healthy"}
 
-@app.on_event("startup")
-async def startup_event():
-    logger.info("Starting up application...")
-    try:
-        with engine.connect() as conn:
-            conn.execute("SELECT 1")
-        logger.info("Database connection successful")
-    except Exception as e:
-        logger.error(f"Database connection failed: {e}")
-        raise
-
 @app.get("/", status_code=status.HTTP_200_OK)
 def root():
     logger.info("Root endpoint called")
