@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Optional
 from pydantic import BaseModel
 from datetime import date
 
@@ -115,6 +115,8 @@ class PedidoCreate(PedidoBase):
 
 class Pedido(PedidoBase):
     pedido_id: int
+    cliente: Cliente
+    funcionario: Funcionario
 
     class Config:
         orm_mode: True
@@ -130,6 +132,7 @@ class ItensPedidoCreate(ItensPedidoBase):
 
 class ItensPedido(ItensPedidoBase):
     itempedido_id: int
+    produto: Produto
 
     class Config:
         orm_mode: True
@@ -143,6 +146,7 @@ class EstoqueCreate(EstoqueBase):
 
 class Estoque(EstoqueBase):
     estoque_id: int
+    produto: Produto
 
     class Config:
         orm_mode: True
