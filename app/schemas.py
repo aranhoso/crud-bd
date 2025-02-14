@@ -37,7 +37,6 @@ class Departamento(DepartamentoBase):
     class Config:
         orm_mode = True
 
-# Funcionarios
 class FuncionarioBase(BaseModel):
     nome: str
     email: Optional[str] = None
