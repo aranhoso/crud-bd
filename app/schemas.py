@@ -1,5 +1,6 @@
 from typing import List, Optional
 from pydantic import BaseModel
+from datetime import date
 
 class DepartamentoBase(BaseModel):
     nome: str
@@ -23,7 +24,7 @@ class FuncionarioCreate(FuncionarioBase):
 
 class Funcionario(FuncionarioBase):
     funcionario_id: int
-    departamento: Departamento  # Inclui o departamento completo
+    departamento: Departamento
 
     class Config:
         orm_mode: True
@@ -106,7 +107,7 @@ class Produto(ProdutoBase):
 class PedidoBase(BaseModel):
     cliente_id: int
     funcionario_id: int
-    data: Optional[str] = None
+    data: Optional[date] = None
     status: Optional[str] = None
 
 class PedidoCreate(PedidoBase):
