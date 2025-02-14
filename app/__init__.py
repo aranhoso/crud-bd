@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from . import models, schemas
 
 __version__ = "1.0.0"
 __author__ = "Guilherme Fernandes Medeiros"

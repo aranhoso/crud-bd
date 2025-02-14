@@ -5,7 +5,8 @@ import logging
 import sys
 from fastapi.middleware.cors import CORSMiddleware
 
-from . import models, schemas, crud
+import app.crud as crud
+from . import models, schemas
 from .database import engine, get_db
 
 logging.basicConfig(
@@ -16,8 +17,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="Simple API",
-    description="A simple API that returns 200 OK and provides GET endpoints for data visualization",
+    title="Trabalho Final",
+    description="CRUD de uma loja virtual",
     version="1.0.0"
 )
 
