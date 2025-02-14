@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Date, DECIMAL
 from sqlalchemy.orm import relationship
 from .database import Base
 
-
 class Cliente(Base):
     __tablename__ = "Clientes"
     cliente_id = Column(Integer, primary_key=True, index=True)
